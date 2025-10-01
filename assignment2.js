@@ -53,10 +53,8 @@ function processImage(img)
 	};
 }
 
-
 window.loadImageFile = function(event)
 {
-
 	var f = event.target.files && event.target.files[0];
 	if (!f) return;
 	
@@ -94,7 +92,6 @@ window.loadImageFile = function(event)
 	reader.readAsDataURL(f);
 }
 
-
 function setupViewMatrix(eye, target)
 {
     var forward = normalize(subtract(target, eye));
@@ -107,9 +104,9 @@ function setupViewMatrix(eye, target)
     return view;
 
 }
+
 function draw()
 {
-
 	var fovRadians = 70 * Math.PI / 180;
 	var aspectRatio = +gl.canvas.width / +gl.canvas.height;
 	var nearClip = 0.001;
